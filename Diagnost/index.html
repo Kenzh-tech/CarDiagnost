@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      /* Modal Styles */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header container">
+      <div class="header__logo">
+        <a href="./index.html">
+          <img src="./images/logo.svg" alt="CARS" />
+        </a>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li class="nav__link_active"><a class="kendik" href="#main">Басты</a></li>
+          <li><a class="kendik" href="#service">Қызмет</a></li>
+          <li><a class="kendik" href="#about">Біз туралы</a></li>
+          <li><a class="kendik" href="#contact">Контакт</a></li>
+        </ul>
+      </nav>
+      <div class="header__lng">
+        <span class="header__lng_active">KZ</span>
+        <span>En</span>
+      </div>
+    </header>
+    <main>
+      <div class="intro" id="main">
+        <div class="container">
+          <h1>Жолда сәттілік!</h1>
+          <button id="openModal">Тағы</button>
+        </div>
+        <div class="intro__blocks">
+          <div class="intro__block">
+            <p>Бізге хабарлас +77777778787</p>
+            <span>Көмек сұрауға ұялма</span>
+          </div>
+          <div class="intro__block intro__block-calendar">
+            <p>Тегін диагностикаға кел</p>
+            <span>Диагностика және тежеуіштерді бақылау</span>
+          </div>
+          <div class="intro__block intro__block-location">
+            <p>Мекенжайымыз</p>
+            <span>Астана, Мангилик Ел 22</span>
+          </div>
+        </div>
+      </div>
+      <div class="services container" id="service">
+        <h2>Услуги</h2>
+        <a href="#">Барлық атқарылатын қызметтер</a>
+        <div class="services__blocks">
+          <div class="service__block">
+            <img src="./images/diagnostic.png" alt="diagnostic" />
+            <div class="overlay"></div>
+            <p>Диагностика маманы </p>
+          </div>
+          <div class="service__block">
+            <img src="./images/tires.png" alt="tires and wheels" />
+            <div class="overlay"></div>
+            <p>Орындаушы маман</p>
+          </div>
+          <div class="service__block">
+            <img src="./images/engine.png" alt="engine" />
+            <div class="overlay"></div>
+            <p>Қозғалтқышты және трансмиссия маманы</p>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="about__inner container" id="about">
+          <div class="about__info">
+            <h2>Біз жақсы автосервис табудың қаншалықты маңызды екенін түсінеміз</h2>
+            <p>
+              Біздің автосервисте білікті шеберлер жұмыс істейді
+              осының арқасында біз Сізге біздің ұзақ мерзімділігімізге кепілдік береміз
+              жөндеу. Біз өз жұмысымызды тез және сауатты орындаймыз.
+            </p>
+            <a href="#">Подробнее о нас</a>
+          </div>
+          <div class="about__img">
+            <img src="./images/service.png" alt="service" />
+          </div>
+        </div>
+      </div>
+      <div class="process container">
+        <h2>ЛЕГКО & БЫСТРО</h2>
+        <p>наш рабочий процесс</p>
+        <div class="process__blocks">
+          <div class="process_block">
+            <p>1. Можете предложить свою цену</p>
+            <span>Цены сервиса могут совпадать с вашей предпочитаемым ценником</span>
+          </div>
+          <div class="process_block">
+            <p>02. За Авто можете не переживать</p>
+            <span>Так как у нас имеется охрана и видеонаблюдение</span>
+          </div>
+          <div class="process_block">
+            <p>03. ПОЧИНИТЕ СВОЙ АВТОМОБИЛЬ У НАС</p>
+            <span>Высококачественное и недорогое обслуживание автомобилей</span>
+          </div>
+        </div>
+      </div>
+      <div class="contacts">
+        <div class="container" id="contact">
+          <h2 class="contacts__title">Contact us</h2>
+          <form class="contacts__form" action="">
+            <div class="form__row">
+              <div class="form__group">
+                <input type="text" class="input" placeholder=" " required />
+                <label for="" class="label">Name</label>
+              </div>
+              <div class="form__group">
+                <input type="text" class="input" placeholder=" " required />
+                <label for="" class="label">Last name</label>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <input type="email" class="input" placeholder=" " required />
+                <label for="" class="label">Email</label>
+              </div>
+              <div class="form__group">
+                <input type="tel" class="input" placeholder=" " required />
+                <label for="" class="label">Phone</label>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <textarea class="textarea" placeholder=" " required></textarea>
+                <label for="" class="label">Message</label>
+              </div>
+            </div>
+            <button class="btn text-upper" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <p class="copyright">© 2024 год</p>
+          <div class="footer__soc">
+            <a href="#" class="footer__soc-link">
+              <img src="./images/linkedin.svg" alt="linkedin" />
+            </a>
+            <a href="#" class="footer__soc-link">
+              <img src="./images/facebook.svg" alt="facebook" />
+            </a>
+            <a href="https://instagram.com" target="_blank" class="footer__soc-link">
+              <img src="./images/instagram.svg" alt="instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="bookingModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Запись на диагностику</h2>
+        <form id="bookingForm">
+          <div class="form__group">
+            <input type="text" class="input"
+            <main>
+              <div class="masters container">
+                <h2>Наши мастера и их рабочие дни</h2>
+                <table border="1" style="width: 100%; text-align: left; margin-top: 20px; border-collapse: collapse;">
+                  <thead>
+                    <tr>
+                      <th style="padding: 10px; background-color: #f4f4f4;">Мастер</th>
+                      <th style="padding: 10px; background-color: #f4f4f4;">Должность</th>
+                      <th style="padding: 10px; background-color: #f4f4f4;">Рабочие дни</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="padding: 10px;">Иван Иванов</td>
+                      <td style="padding: 10px;">Диагност</td>
+                      <td style="padding: 10px;">Понедельник - Пятница</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px;">Мария Смирнова</td>
+                      <td style="padding: 10px;">Специалист по шинам</td>
+                      <td style="padding: 10px;">Вторник - Суббота</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px;">Сергей Петров</td>
+                      <td style="padding: 10px;">Механик</td>
+                      <td style="padding: 10px;">Среда - Воскресенье</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </main>
+            
